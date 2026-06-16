@@ -1,6 +1,6 @@
 #define Array_h
 #ifdef Array_h
-
+#include <stdio.h>
 typedef struct{
     char **data;
     size_t eSize;

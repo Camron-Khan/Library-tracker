@@ -1,5 +1,5 @@
-#include "arraylist.hpp"
 #include <cstddef>
+#include "arraylist.hpp"
 #include <stdlib.h>
 #include <stdio.h>
 void initArray( sArray *arr,size_t initial_capacity){
@@ -20,7 +20,6 @@ void addArray(sArray *arr, char **element){
       	if (temp == NULL){
        		return ;
        }
-
     }
 
 
