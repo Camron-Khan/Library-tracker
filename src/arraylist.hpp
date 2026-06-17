@@ -11,6 +11,6 @@ typedef struct{
 void initArray( sArray *arr,size_t initial_capacity);     // This will initilize the array
 void addArray(sArray *arr, char **b);  // This will add something to the array
 void subArray(sArray *arr, size_t index);  // this will remove an element from an array
-void srArray(sArray *arr, size_t index);   // this will search though the array for an element
+void srArray(sArray *arr, size_t size, char *target);   // this will search though the array for an element
 
 #endif
