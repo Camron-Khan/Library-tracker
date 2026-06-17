@@ -1,6 +1,5 @@
-#include <cstddef>
+#include <cstring>
 #include <stdlib.h>
-#include <stdio.h>
 #include "arraylist.hpp"
 void initArray( sArray *arr,size_t initial_capacity){
    arr->eSize = 0;
@@ -41,7 +40,7 @@ void subArray(sArray *arr, size_t index){
 
 void srArray(sArray *arr, size_t size, char *target){
 	for (int i = 0; i < size; i++){
-		if(strcmp(arr[i], target) == 0){
+		if(strcmp(arr->data[i], target) == 0){
 			printf("String exists");
 		}
 	}
