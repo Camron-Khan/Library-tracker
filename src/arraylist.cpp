@@ -6,6 +6,7 @@ void initArray( sArray *arr,size_t initial_capacity){
    arr->contSize = initial_capacity;
    arr->data = (char ** )(arr->contSize * sizeof(char *));
 
+
    if (arr == NULL){
        printf("Memory allocation failed");
    }
