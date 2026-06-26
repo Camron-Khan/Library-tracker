@@ -16,7 +16,7 @@ int main(){
     sArray user;
 	while(true){
 		printMenu();
-      scanf("%d", menuOpt);
+      scanf("%d", &menuOpt);
 		switch(menuOpt){
 		case 1:
           // This function is to add something to the list
@@ -28,7 +28,7 @@ int main(){
           char subName[50];
           printf("What do you want to delete?");
           fgets(nameBuff,sizeof(nameBuff),stdin);
-          subArray(&user, nameBuff);
+          subArray(&user, nameBuff, sizeof(subName));
 			//subtracting
 			break;
 		case 3:

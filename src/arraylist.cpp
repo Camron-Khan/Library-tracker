@@ -1,5 +1,6 @@
 #include <cstring>
 #include <stdlib.h>
+#include <string.h>
 #include "arraylist.hpp"
 void initArray( sArray *arr,size_t initial_capacity){
    arr->eSize = 0;
@@ -25,23 +26,21 @@ void addArray(sArray *arr, char *element){
     if (arr->data[arr->eSize] == NULL){
     	printf("String allocation failed");
     }
-    strcpy(arr->data[arr->eSize], element);
+    std::strcpy(arr->data[arr->eSize], element);
 }
 
-void subArray(sArray *arr, size_t index){
-	if (index >= arr->eSize){
-		printf("Out of bounds");
-	}
-	free(arr->data[index]);
-	if (index != arr->eSize){
-		arr->data[index] = arr->data[arr->eSize -1];
-	}
-	arr->eSize --;
+void subArray(sArray *arr, char *target, size_t size){
+  for(int i = 0; i < size; i++){
+    if(std::strcmp(arr->data[i], target) == 1){
+      printf("string does exist");
+    }
+    printf("string does not exist");
+  }
 }
 
 void srArray(sArray *arr, size_t size, char *target){
 	for (int i = 0; i < size; i++){
-		if(strcmp(arr->data[i], target) == 0){
+		if(std::strcmp(arr->data[i], target) == 0){
 			printf("String exists");
 		}
 	}
