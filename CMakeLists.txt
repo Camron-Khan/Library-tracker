@@ -3,6 +3,9 @@ project(Library_tracker LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-add_executable(library_tracker src/main.cpp)
-add_library(myLib STATIC src/arraylist.cpp src/arraylist.hpp)
-target_link_libraries(${PROJECT_NAME} myLib)
+add_executable(librarytracker src/main.cpp)
+target_sources(librarytracker PRIVATE
+                              src/main.cpp
+                              src/arraylist.cpp
+                              src/arraylist.hpp
+)

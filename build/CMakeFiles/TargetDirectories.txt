@@ -1,0 +1,3 @@
+C:/dev/Library-tracker/build/CMakeFiles/librarytracker.dir
+C:/dev/Library-tracker/build/CMakeFiles/edit_cache.dir
+C:/dev/Library-tracker/build/CMakeFiles/rebuild_cache.dir

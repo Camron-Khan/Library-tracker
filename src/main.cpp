@@ -4,8 +4,8 @@
 
 void printMenu(){
 	printf(" 1 for adding list");
-	printf("/n 2 for subtracting list");
-	printf("/n 3 for seacjing list");
+	printf("\n 2 for subtracting list");
+	printf("\n 3 for seacjing list");
 }
 // Maybe I'll do a string input function to create a string without size
 //void stringInp(){}
