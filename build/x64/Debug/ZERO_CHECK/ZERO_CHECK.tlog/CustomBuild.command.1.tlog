@@ -1,0 +1,10 @@
+^C:\DEV\LIBRARY-TRACKER\BUILD\CMAKEFILES\2F3FCF48B97388D21EBFE68D5082CB1A\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Dev/Library-tracker -BC:/Dev/Library-tracker/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Dev/Library-tracker/build/Library_tracker.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

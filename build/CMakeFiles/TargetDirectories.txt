@@ -1,3 +1,3 @@
-C:/dev/Library-tracker/build/CMakeFiles/librarytracker.dir
-C:/dev/Library-tracker/build/CMakeFiles/edit_cache.dir
-C:/dev/Library-tracker/build/CMakeFiles/rebuild_cache.dir
+C:/Dev/Library-tracker/build/CMakeFiles/librarytracker.dir
+C:/Dev/Library-tracker/build/CMakeFiles/ALL_BUILD.dir
+C:/Dev/Library-tracker/build/CMakeFiles/ZERO_CHECK.dir

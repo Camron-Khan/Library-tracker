@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/dev/Library-tracker/build/cmake_install.cmake"
+		"C:/Dev/Library-tracker/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
