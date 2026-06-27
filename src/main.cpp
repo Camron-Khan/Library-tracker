@@ -7,8 +7,7 @@ void printMenu(){
 	printf("\n 2 for subtracting list");
 	printf("\n 3 for seacjing list");
 }
-// Maybe I'll do a string input function to create a string without size
-//void stringInp(){}
+
 
 int main(){
     char nameBuff[50];
@@ -22,13 +21,14 @@ int main(){
           // This function is to add something to the list
           printf("What do you want to add to the list?");
           fgets(nameBuff,sizeof(nameBuff),stdin);
+          addArray(&user, &nameBuff);
 			break;
 		case 2:
           // This function is the remove something from the list
           char subName[50];
           printf("What do you want to delete?");
           fgets(nameBuff,sizeof(nameBuff),stdin);
-          subArray(&user, nameBuff, sizeof(subName));
+          subArray(&user, &nameBuff, sizeof(subName));
 			//subtracting
 			break;
 		case 3:
@@ -36,6 +36,7 @@ int main(){
           char searchItem[50];
           printf("What do you want to look for?");
           fgets(nameBuff,sizeof(nameBuff),stdin);
+          srArray(&user, &nameBuff, sizeof(searchItem));
 			break;
 		default:
 			printf("incorrect option");
