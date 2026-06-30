@@ -5,48 +5,51 @@
 void initArray( sArray *arr,size_t initial_capacity){
    arr->contSize = initial_capacity;
    arr->data = (char ** )(arr->contSize * sizeof(char *));
-   arr->elementSize = NULL;
-
    if (arr == NULL){
        printf("Memory allocation failed");
    }
 
 }
 
-void addArray(sArray *arr, char *target){
-  for (int i = 0; arr->elementSize[i] > arr->contSize; i++){
-    if (arr)
+void addArray(sArray *arr, char *name){
+  if (arr == NULL){
+    std::printf("Memory error");
   }
 
-
-
-// This is the old reference for the add Array function
-  //if (arr->eSize == arr->contSize){
-    //arr->eSize = 2;
-    //	void *temp = realloc(arr->data, arr->contSize * sizeof(char));
-    // 	if (temp == NULL){
-    //  		printf("Reallcation failed");
-      // }
-    //}
-    //arr->data[arr->eSize] = (char *)malloc((strlen(element) + 1) * sizeof(char));
-    //if (arr->data[arr->eSize] == NULL){
-    	//printf("String allocation failed");
-    //}
-    //std::strcpy(arr->data[arr->eSize], element);
+  if (arr->index > arr->contSize){
+    std::printf("You are out of space for the allocation");
+  }
+  //This is to check if you have the same name in the list already  
+  for (int i = 0; arr->index[i] >= arr->contSize; i++){
+    if (arr->data == name){
+      std::printf("you already have this name in the list");
+     }
+  arr[index] = malloc(strlen(name) + 1);
+  strcpy(arr[index], name);
+  }
 }
 
-void subArray(sArray *arr, char *target, size_t size){
-  for(int i = 0; i < size; i++){
-    if(std::strcmp(arr->data[i], target) == 1){
-      printf("string does exist");
+void subArray(sArray *arr, char *name){
+  if (arr == NULL){
+    std::printf("Memory error");
+  }
+
+  for (int i = 0; arr->index[i] >= arr->contSize, i++){
+    if (strcmp(arr->data, name) == ){
+      
     }
-    printf("string does not exist");
   }
+
+
 }
 
-void srArray(sArray *arr, char *target, size_t size){
-	for (int i = 0; i < size; i++){
-		if(std::strcmp(arr->data[i], target) == 0){
+void srArray(sArray *arr, char *name){
+	if (arr == NULL){
+    std::printf("Memory error");
+  }
+
+  for (int i = 0; i < size; i++){
+		if(std::strcmp(arr->data[i], name) == true){
 			printf("String exists");
 		}
 	}

@@ -4,7 +4,7 @@
 typedef struct{
     char **data;
     size_t contSize;
-
+    int index;
 }sArray;
 
 void initArray( sArray *arr,size_t initial_capacity);     // This will initilize the array
