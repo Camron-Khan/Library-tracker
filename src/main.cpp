@@ -14,38 +14,36 @@ int main(){
     char nameBuff[50];
 	int menuOpt = 0;
     sArray user;
-    initarray(&user, 0, 50);
+    initArray(&user, 0, 50);
 	while(true){
 		printMenu();
-        scanf("%d", &menuOpt);
+        fgets(menuOpt, sizeof(menuOpt),stdin);
 		switch(menuOpt){
 		 case 1:
           // This function is to add something to the list
-          printf("What do you want to add to the list?");
+          printf("What do you want to add to the list?\n");
           fgets(nameBuff,sizeof(nameBuff),stdin);
           addArray(&user, &nameBuff);
 			break;
 		 case 2:
           // This function is the remove something from the list
-          char subName[50];
-          printf("What do you want to delete?");
+          printf("What do you want to delete?\n");
           fgets(nameBuff,sizeof(nameBuff),stdin);
-          subArray(&user, &nameBuff, sizeof(subName));
+          subArray(&user, &nameBuff);
 			//subtracting
 			break;
 		 case 3:
            // This function is the search for something in the list
-          char searchItem[50];
-          printf("What do you want to look for?");
+          printf("What do you want to look for?\n");
           fgets(nameBuff,sizeof(nameBuff),stdin);
-          srArray(&user, &nameBuff, sizeof(searchItem));
+          srArray(&user, &nameBuff);
 			break;
 		 case 4:
 		 free(user);
-		 printf("Exting program");
+		 printf("Exting program\n");
 		 break;	
 		 default:
-			printf("incorrect option");
+			printf("incorrect option\n");
     }
   }
 }

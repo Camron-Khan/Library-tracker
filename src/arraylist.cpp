@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "arraylist.hpp"
+
 void initArray( sArray *arr,int startindex, size_t initial_capacity){
    arr->contSize = initial_capacity;
    arr->data = (char ** )(arr->contSize * sizeof(char *));
