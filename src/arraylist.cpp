@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include "arraylist.hpp"
-void initArray( sArray *arr,size_t initial_capacity){
+void initArray( sArray *arr,int startindex, size_t initial_capacity){
    arr->contSize = initial_capacity;
    arr->data = (char ** )(arr->contSize * sizeof(char *));
-   if (arr == NULL){
+   arr->index = startindex;
+      if (arr == NULL){
        printf("Memory allocation failed");
    }
 
@@ -13,16 +14,16 @@ void initArray( sArray *arr,size_t initial_capacity){
 
 void addArray(sArray *arr, char *name){
   if (arr == NULL){
-    std::printf("Memory error");
+    printf("Memory error");
   }
 
   if (arr->index > arr->contSize){
-    std::printf("You are out of space for the allocation");
+    printf("You are out of space for the allocation");
   }
   //This is to check if you have the same name in the list already  
   for (int i = 0; arr->index[i] >= arr->contSize; i++){
     if (arr->data == name){
-      std::printf("you already have this name in the list");
+      printf("you already have this name in the list");
      }
   arr[index] = malloc(strlen(name) + 1);
   strcpy(arr[index], name);
@@ -31,7 +32,7 @@ void addArray(sArray *arr, char *name){
 
 void subArray(sArray *arr, char *name){
   if (arr == NULL){
-    std::printf("Memory error");
+    printf("Memory error");
   }
 
   for (int i = 0; arr->index[i] >= arr->contSize, i++){
@@ -45,10 +46,10 @@ void subArray(sArray *arr, char *name){
 
 void srArray(sArray *arr, char *name){
 	if (arr == NULL){
-    std::printf("Memory error");
+    printf("Memory error");
   }
 
-  for (int i = 0; i < size; i++){
+  for (int i = arr->index; arr->index[i] >= arr->contSize; i++){
 		if(std::strcmp(arr->data[i], name) == true){
 			printf("String exists");
 		}
