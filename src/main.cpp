@@ -1,7 +1,7 @@
 #include "arraylist.hpp"
 #include <cstring>
 #include <cstdio>
-
+#include <cstdlib>
 void printMenu(){
 	printf(" 1 for adding list");
 	printf("\n 2 for subtracting list");
@@ -17,7 +17,7 @@ int main(){
     initArray(&user, 0, 50);
 	while(true){
 		printMenu();
-        fgets(menuOpt, sizeof(menuOpt),stdin);
+        scanf("%d", &menuOpt);
 		switch(menuOpt){
 		 case 1:
           // This function is to add something to the list
@@ -39,9 +39,13 @@ int main(){
           srArray(&user, &nameBuff);
 			break;
 		 case 4:
-		 free(user);
-		 printf("Exting program\n");
-		 break;	
+     for (int i = 0; i < user->index[i]; i++){
+       free(user->*data[i]);
+     }
+     free(user->&data);
+     free(&user);
+     printf("Exting program\n");
+		 break;
 		 default:
 			printf("incorrect option\n");
     }
