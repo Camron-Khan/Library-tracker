@@ -39,12 +39,8 @@ int main(){
           srArray(&user, &nameBuff);
 			break;
 		 case 4:
-     for (int i = 0; i < user->index[i]; i++){
-       free(user->*data[i]);
-     }
-     free(user->&data);
-     free(&user);
-     printf("Exting program\n");
+     release(&user); 
+
 		 break;
 		 default:
 			printf("incorrect option\n");

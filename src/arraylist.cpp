@@ -3,7 +3,7 @@
 #include <string.h>
 #include "arraylist.hpp"
 
-void initArray( sArray *arr,int startindex, size_t initial_capacity){
+void initArray( sArray *arr,int Sindex, size_t initial_capacity){
    arr->contSize = initial_capacity;
    arr->data = (char ** )(arr->contSize * sizeof(char *));
    arr->index = startindex;
@@ -37,7 +37,7 @@ void subArray(sArray *arr, char *name){
   }
 
   for (int i = 0; arr->index[i] >= arr->contSize, i++){
-    if (strcmp(arr->data, name) == ){
+    if (strcmp(arr->data, name) == true){
       
     }
   }
@@ -57,3 +57,15 @@ void srArray(sArray *arr, char *name){
 	}
 	printf("String dosent exist");
 }
+
+  void release(sArray **arr){
+    if (*arr == NULL || arr == NULL){
+      return;
+     }
+      if ((*arr)->data){
+       for (int i = startindex; i < (*arr)->contSize; i++){
+        free((*arr)->data);
+       }
+      }
+      free(*arr);
+  }
