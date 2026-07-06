@@ -1,5 +1,8 @@
 #define Array_h
 #ifdef Array_h
+#include <cstdlib>
+
+
 typedef struct{
     char **data;
     size_t contSize;
