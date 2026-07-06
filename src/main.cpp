@@ -18,26 +18,26 @@ int main(){
 	while(true){
 		printMenu();
         scanf("%d", &menuOpt);
-		switch(menuOpt){
+		 switch(menuOpt){
 		 case 1:
           // This function is to add something to the list
           printf("What do you want to add to the list?\n");
           fgets(nameBuff,sizeof(nameBuff),stdin);
           addArray(&user, &nameBuff);
-			break;
+		 break;
 		 case 2:
           // This function is the remove something from the list
           printf("What do you want to delete?\n");
           fgets(nameBuff,sizeof(nameBuff),stdin);
           subArray(&user, &nameBuff);
 			//subtracting
-			break;
+		 break;
 		 case 3:
            // This function is the search for something in the list
           printf("What do you want to look for?\n");
           fgets(nameBuff,sizeof(nameBuff),stdin);
           srArray(&user, &nameBuff);
-			break;
+		break;
 		 case 4:
      release(&user); 
 
